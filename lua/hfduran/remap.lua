@@ -11,7 +11,8 @@ vim.api.nvim_set_keymap('n', 'g]', '<Cmd>lua vim.diagnostic.goto_next()<CR>', { 
 vim.api.nvim_set_keymap('n', 'g[', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true, desc="prev diagnostic"})
 vim.api.nvim_set_keymap('n', 'ga', '<Cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true, desc="code actions" })
 vim.api.nvim_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc="references"})
-vim.api.nvim_set_keymap('n', 'gt', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', { noremap = true, silent = true, desc="type definition"})
+vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc="type definition"})
+vim.api.nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true, desc="type definition"})
 vim.api.nvim_set_keymap('n', 'gn', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true, desc="rename"})
 
 -- bufferline
@@ -69,3 +70,8 @@ vim.keymap.set('n', '<C-n>',
 
 -- outline
 vim.keymap.set('n', '<C-k>o', '<Cmd>OutlineOpen<CR>')
+
+-- ToggleTerm
+vim.keymap.set('n', '<C-\'>', '<Cmd>ToggleTerm<CR>')
+vim.keymap.set('t', '<C-\'>', [[<C-\><C-n>]])
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])

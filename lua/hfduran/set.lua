@@ -22,3 +22,11 @@ vim.opt.incsearch=true
 vim.opt.termguicolors=true
 
 vim.opt.pumheight=10
+
+vim.diagnostic.config({
+  virtual_text      = true,
+  underline         = true,
+  signs             = true,
+  update_in_insert  = true,
+})
+

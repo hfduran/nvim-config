@@ -23,3 +23,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
 require("hfduran.lazy_init")
 require("hfduran.set")
 require("hfduran.remap")
+require("hfduran.lsps")
